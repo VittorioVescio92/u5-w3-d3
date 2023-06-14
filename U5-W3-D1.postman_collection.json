@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "bd287341-b1bc-4fee-94b5-2577f961520b",
+		"name": "U5-W3-D1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26374578"
+	},
+	"item": [
+		{
+			"name": "Login Utente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJvZG9uZS5tYXp6YUBlbWFpbC5pdCIsImlhdCI6MTY4NjU4MTExNCwiZXhwIjoxNjg3MTg1OTE0fQ.lzCaRs5qgYGc3PcQN_SgmjbFIMfRpDpBZR3l68Z_KPFPi2VG6yBCceEJvZAWiEe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"odone.mazza@email.it\",\r\n    \"password\":\"0884484mr4zhb33\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrazione Utente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhamVqZUBnbWFpbC5jb20iLCJpYXQiOjE2ODYyMjkwNzUsImV4cCI6MTY4NjgzMzg3NX0.H2l82YYn2zpRdFfk7GbiHO8IGeSSft8gHaj6uwTgEK289C0O3eKLC5uXO7R3L9Di",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"PdorFiglioDiKmer\",\r\n    \"nome\":\"Pdor\",\r\n    \"cognome\":\"FiglioDiKmer\",\r\n    \"email\":\"tribuDiStar@agg.com\",\r\n    \"password\":\"coluiCheSconfisseTutti\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Elenco Utenti",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0cmlidURpU3RhckBhZ2cuY29tIiwiaWF0IjoxNjg2NTgyNTQ0LCJleHAiOjE2ODcxODczNDR9.vzEIbV-1rru4P80RBRoi08yhk5dr1kNZFgOdGWjgD73FwUzz9BAsmpzjL1oThDQg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Singolo Utente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0cmlidURpU3RhckBhZ2cuY29tIiwiaWF0IjoxNjg2NTgyNTQ0LCJleHAiOjE2ODcxODczNDR9.vzEIbV-1rru4P80RBRoi08yhk5dr1kNZFgOdGWjgD73FwUzz9BAsmpzjL1oThDQg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/d3deab73-b4ad-4c83-865c-e2020724f881",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"d3deab73-b4ad-4c83-865c-e2020724f881"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
